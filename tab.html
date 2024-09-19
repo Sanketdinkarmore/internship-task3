@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+        input[type="radio"] {
+            display: none;
+        }
+
+      
+        .tab-label {
+            padding: 10px 20px;
+            display: inline-block;
+            cursor: pointer;
+            background-color: lightgray;
+            border-radius: 5px 5px 0 0;
+            margin-right: 25px;
+        }
+
+        
+        input[type="radio"]:checked + .tab-label {
+            background-color: #333;
+            color: white;
+        }
+
+      
+        .tab-content {
+            display: none;
+            padding: 15px;
+            background-color: #f1f1f1;
+            border-top: 5px solid #333;
+        }
+
+        
+        #tab1:checked ~ .content #content1,
+        #tab2:checked ~ .content #content2,
+        #tab3:checked ~ .content #content3 {
+            display: block;
+        }
+    </style>
+    <title>Tab pane</title>
+</head>
+<body>
+
+    
+    <input type="radio" id="tab1" name="tab" checked>
+    <label for="tab1" class="tab-label">Tab 1</label>
+
+    <input type="radio" id="tab2" name="tab">
+    <label for="tab2" class="tab-label">Tab 2</label>
+
+    <input type="radio" id="tab3" name="tab">
+    <label for="tab3" class="tab-label">Tab 3</label>
+
+    
+    <div class="content">
+        <div id="content1" class="tab-content">
+            <h2>Content 1</h2>
+            <p>This is the content for Tab 1.</p>
+        </div>
+        <div id="content2" class="tab-content">
+            <h2>Content 2</h2>
+            <p>This is the content for Tab 2.</p>
+        </div>
+        <div id="content3" class="tab-content">
+            <h2>Content 3</h2>
+            <p>This is the content for Tab 3.</p>
+        </div>
+    </div>
+
+</body>
+</html>
